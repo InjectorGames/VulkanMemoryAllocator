@@ -37,7 +37,7 @@ This library can help game developers to manage memory allocations and resource 
 Additional features:
 
 - Well-documented - description of all functions and structures provided, along with chapters that contain general description and example code.
-- Thread-safety: Library is designed to be used by multithreaded code.
+- Thread-safety: Library is designed to be used in multithreaded code. Access to a single device memory block referred by different buffers and textures (binding, mapping) is synchronized internally.
 - Configuration: Fill optional members of CreateInfo structure to provide custom CPU memory allocator, pointers to Vulkan functions and other parameters.
 - Customization: Predefine appropriate macros to provide your own implementation of all external facilities used by the library, from assert, mutex, and atomic, to vector and linked list. 
 - Support for memory mapping, reference-counted internally. Support for persistently mapped memory: Just allocate with appropriate flag and you get access to mapped pointer.
@@ -104,6 +104,7 @@ See **[Documentation](https://gpuopen-librariesandsdks.github.io/VulkanMemoryAll
 
 # Software using this library
 
+- **[Detroit: Become Human](https://gpuopen.com/learn/porting-detroit-3/)**
 - **[Vulkan Samples](https://github.com/LunarG/VulkanSamples)** - official Khronos Vulkan samples. License: Apache-style.
 - **[Anvil](https://github.com/GPUOpen-LibrariesAndSDKs/Anvil)** - cross-platform framework for Vulkan. License: MIT.
 - **[Filament](https://github.com/google/filament)** - physically based rendering engine for Android, Windows, Linux and macOS, from Google. Apache License 2.0.
